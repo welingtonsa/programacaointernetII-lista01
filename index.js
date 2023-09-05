@@ -1,13 +1,31 @@
-const http = require('http');
-const hostname = '127.0.0.1';
+/** Faz requisicao do modulo express . */
+const express = require('express'); 
+const path = require('path');
+/** Chama a funcao express para iniciar a aplicacao. */
+const app = express();
+/**Port  */
 const port = 3000;
 
-const server = http.createServer((req, res) =>{
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hadoukemmmm\n');
+/** Rota para pagina inicial. */
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/home.html'));
 })
 
-server.listen(port, hostname, () =>{
-    console.log(`Server Running at http://${hostname}:${port}`);
+/** Rota para about */
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/about.html'))
+})
+
+/**Rota para login */
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/login.html'))
+})
+
+/** Rota para user */
+app.get('/user', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/user.html'))
+})
+
+app.listen(port, ()=>{
+    console.log(`Running at port: ${port}`)
 })
