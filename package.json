@@ -1,0 +1,19 @@
+{
+  "name": "list01",
+  "version": "1.0.0",
+  "description": "Programacao Para Internet II - Lista 01 05/09/2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welingtonsa/programacaointernetII-lista01.git"
+  },
+  "author": "Welington da Silva Araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/welingtonsa/programacaointernetII-lista01/issues"
+  },
+  "homepage": "https://github.com/welingtonsa/programacaointernetII-lista01#readme"
+}
